@@ -1,0 +1,62 @@
+.btn
+    display: inline-block
+    border: 0
+    background: transparent
+    &-login
+        position: relative
+        background: #FFC20E
+        width: 100%
+        padding: 12px 0
+        border-radius: 4px
+        span
+            position: relative
+            font-weight: 600
+            font-size: 16px
+            color: #454F5B
+            transition: 0.2s 0.1s
+            z-index: 100
+        em
+            position: relative
+            color: #454F5B
+            transition: 0.2s 0.1s
+            z-index: 100
+        &::before
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            height: 100%
+            width: 0
+            border-radius: 4px
+            background: linear-gradient(0deg, #BE1128 0%, #EB2629 152.65%)
+            transition: 0.3s ease-out
+            content: ''
+        @media screen and ( min-width: 1025px )
+            &:hover
+                span,
+                em
+                    color: #fff
+                &::before
+                    width: 100%
+    &-default
+        position: relative
+        box-sizing: border-box
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 16px
+        gap: 6px
+        width: max-content
+        height: 56px
+        border-radius: 32px
+        p,
+        span
+            font-weight: 600
+            font-size: 17px
+            line-height: 22px
+            display: flex
+            align-items: center
+            letter-spacing: -0.4px
+        &_yellow
+            background: #F7C913
+            border-radius: 32px

@@ -1,24 +1,29 @@
 header 
-	// Start Navbar
-	nav.navbar.navbar-expand-lg.custom-nav.navbar-light.fixed-top.sticky
-		.container
-			h1.navbar-brand.pt-0.logo
-				a(href='#')
-					img.img-fluid(src='./images/logo.png' alt='')
-			button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav')
-				span.mdi.mdi-menu
-			#navbarNav.collapse.navbar-collapse
-				ul#main_nav.navbar-nav.ms-auto
-					li.nav-item
-						a.nav-link(href='#home') Home
-					li.nav-item
-						a.nav-link(href='#about') About
-					li.nav-item
-						a.nav-link(href='#services') Services
-					li.nav-item
-						a.nav-link(href='#portfolio') Portfolio
-					li.nav-item
-						a.nav-link(href='#blog') Blog
-					li.nav-item
-						a.nav-link(href='#contact') Contact
-	// End Navbar
+	.top-bar.d-flex.align-items-center.justify-content-between
+		.top-bar-left.d-flex.align-items-center
+			a.top-bar-left__menu(href="") 
+				img(src="./images/icons/menu.svg", alt="")
+			a.top-bar-left__brand.ms-3.me-3.pe-3(href="")
+				img(src="./images/logo.svg", alt="") 
+			form.wrap-form.d-flex.align-items-center(action="") 
+				.form-group
+					select.form-control.m-0(name='name' placeholder='Tất cả khu vực')
+						option(value="") Tất cả khu vực
+						option(value="") Tất cả khu vực
+				.form-group
+					select.form-control.m-0.ms-3(name='name' placeholder='Tất cả khu vực')
+						option(value="") Tất cả Tỉnh/TP
+						option(value="") Tất cả Tỉnh/TP
+		.top-bar-right
+			ul.d-flex.align-items-center
+				li
+					.user 
+						a(href="") 
+							span.fw-bold Khoa
+							img.avatar.ms-2(src="./images/avatar.png", alt="") 
+				li
+					a.bell_ring(href="") 
+						img(src="./images/icons/bell.svg", alt="")
+				li 
+					a.log_out(href="") 
+						img(src="./images/icons/logout.svg", alt="")

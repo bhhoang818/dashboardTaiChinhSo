@@ -5,11 +5,12 @@ block var
 	- var bodyClass = 'homepage'
 
 block main
-	include ../components/banner/index.pug
-	include ../components/home/about/index.pug
-	include ../components/home/services/index.pug
-	include ../components/home/portfolio/index.pug
-	include ../components/home/blog/index.pug
-	include ../components/home/contact/index.pug
-
-
+	include ../components/home/ketQuaMucTieu/index.pug
+	.container-fluid 
+		.wrap-container 
+			.wrap-left 
+				include ../components/home/hieuQuaDigitalMKT/index.pug
+				include ../components/home/soLieuChiTiet/index.pug
+			.wrap-right 
+				include ../components/home/soLuongKHDangKy/index.pug
+				include ../components/home/soLuongKHSuDung/index.pug

@@ -38,7 +38,8 @@
                                         &::after
                                             width: 100%
                             .tab-content
-                                .panel
+                                .tab-panel
+                                    display: none
                                     table
                                         width: 100%
                                         tr
@@ -85,3 +86,5 @@
                                             &:last-child
                                                 td
                                                     border-bottom: 1px solid #D3D8DE
+                                    &.active
+                                        display: block

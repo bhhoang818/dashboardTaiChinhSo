@@ -6,9 +6,10 @@
 		"node_modules/jquery/dist/jquery.js",
 		"node_modules/daterangepicker/moment.min.js",
 		"node_modules/moment/locale/vi.js",
-		"node_modules/daterangepicker/daterangepicker.js",
+		"src/_plugins/daterangepicker.js",
 		"node_modules/lazysizes/lazysizes.js",
-		"node_modules/chart.js/dist/chart.js"
+		"node_modules/chart.js/dist/chart.js",
+		"src/_plugins/mapping.js"
 	],
 	"css": [
 		"node_modules/daterangepicker/daterangepicker.css"

@@ -2,6 +2,8 @@ $(document).ready(function () {
     pickerDate();
     chartJs();
     progressBar();
+    tabsPanel();
+    mappingListener();
 })
 const pickerDate = () => {
     var start = moment().subtract(29, 'days');
@@ -45,7 +47,7 @@ const chartJs = () => {
             }]
         },
         options: {
-            cutout: 75,
+            cutout: 70,
             hoverOffset: 5,
             borderWidth: 3,
             responsive: true
@@ -67,7 +69,7 @@ const chartJs = () => {
             }]
         },
         options: {
-            cutout: 75,
+            cutout: 70,
             hoverOffset: 5,
             borderWidth: 3,
             responsive: true
@@ -84,4 +86,39 @@ const progressBar = () => {
             }
         });
     }, 500);
+}
+const tabsPanel = () => {
+    var theTabs = $(".nav-tabs li");
+    var i;
+
+    function theTabClicks(tabClickEvent) {
+        var clickedTab = tabClickEvent.currentTarget;
+        var tabParent = tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
+        var theTabs = tabParent.querySelectorAll(".nav-tabs li");
+        for (var i = 0; i < theTabs.length; i++) {
+            theTabs[i].classList.remove("active");
+        }
+
+        clickedTab.classList.add("active");
+        tabClickEvent.preventDefault();
+        var contentPanes = tabParent.querySelectorAll(".tab-panel");
+        for (i = 0; i < contentPanes.length; i++) {
+            contentPanes[i].classList.remove("active");
+        }
+        var anchorReference = tabClickEvent.target;
+        var activePaneId = anchorReference.getAttribute("href");
+        var activePane = tabParent.querySelector(activePaneId);
+        activePane.classList.add("active");
+
+    }
+    for (i = 0; i < theTabs.length; i++) {
+        theTabs[i].addEventListener("click", theTabClicks)
+    }
+}
+const mappingListener = () => {
+    $(".daterangepicker").append("<div id='drp-calendar'></div>");
+    $(".daterangepicker").append("<div id='drp-buttons'></div>");
+    $(".daterangepicker .drp-calendar.left").appendTo('.daterangepicker #drp-calendar');
+    $(".daterangepicker .drp-calendar.right").appendTo('.daterangepicker #drp-calendar');
+    $(".daterangepicker .drp-buttons").appendTo('.daterangepicker #drp-buttons');
 }

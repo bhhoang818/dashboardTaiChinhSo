@@ -1,0 +1,87 @@
+.section-2
+    .wrap-container
+        .wrap-left
+            .wrap-bottom
+                padding-bottom: 120px
+                .panel
+                    &-body
+                        .container--tabs
+                            .nav-tabs
+                                gap: 42px
+                                margin-bottom: 16px
+                                padding-bottom: 9px
+                                border-bottom: 1px solid #D3D8DE
+
+                                li
+                                    position: relative
+                                    a
+                                        font-weight: 600
+                                        font-size: 24px
+                                        line-height: 30px
+                                        color: #464646
+                                        transition: all .3s
+                                        @media screen and ( max-width: 1366.98px )
+                                            font-size: 16px
+                                    &::after
+                                        position: absolute
+                                        bottom: -9px
+                                        left: 0
+                                        content: ''
+                                        width: 0
+                                        height: 5px
+                                        background: #BE1128
+                                        transition: all .3s
+                                    &.active,
+                                    &:hover
+                                        a
+                                            color: #BE1128
+                                        &::after
+                                            width: 100%
+                            .tab-content
+                                .panel
+                                    table
+                                        width: 100%
+                                        tr
+                                            td
+                                                padding: 16px
+                                                border-top: 1px solid #D3D8DE
+                                                h3
+                                                    font-weight: 700
+                                                    font-size: 18px
+                                                    line-height: 24px
+                                                    text-align: right
+                                                    color: #000000
+                                                p
+                                                    font-weight: 500
+                                                    font-size: 18px
+                                                    line-height: 24px
+                                                    color: #464646
+                                                    text-align: right
+                                                    &.title
+                                                        cursor: pointer
+                                                &:nth-child(1)
+                                                    p
+                                                        text-align: left
+                                                &:nth-child(2)
+                                                    border-left: 1px solid #D3D8DE
+                                                    border-right: 1px solid #D3D8DE
+                                            &:nth-child(1)
+                                                td
+                                                    p
+                                                        font-weight: 600
+                                                        font-size: 16px
+                                                        line-height: 24px
+                                                        text-align: right
+                                                        color: #464646
+                                                    &:nth-child(1)
+                                                        p
+                                                            text-align: left
+                                            &:nth-child(2)
+                                                background: #F8F9FA
+                                                td
+                                                    &:nth-child(1)
+                                                        h3
+                                                            text-align: left
+                                            &:last-child
+                                                td
+                                                    border-bottom: 1px solid #D3D8DE

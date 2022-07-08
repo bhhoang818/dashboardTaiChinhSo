@@ -6,11 +6,13 @@ block var
 
 block main
 	include ../components/home/ketQuaMucTieu/index.pug
-	.container-fluid 
-		.wrap-container 
-			.wrap-left 
-				include ../components/home/hieuQuaDigitalMKT/index.pug
-				include ../components/home/soLieuChiTiet/index.pug
-			.wrap-right 
-				include ../components/home/soLuongKHDangKy/index.pug
-				include ../components/home/soLuongKHSuDung/index.pug
+	section.hero-section.section-2
+		.container-fluid 
+			h2.hero-title.pt-4.pb-4 Hiệu quả digital MKT
+			.wrap-container 
+				.wrap-left 
+					include ../components/home/hanhTrinhKH/index.pug
+					include ../components/home/soLieuChiTiet/index.pug
+				.wrap-right 
+					include ../components/home/soLuongKHDangKy/index.pug
+					include ../components/home/soLuongKHSuDung/index.pug

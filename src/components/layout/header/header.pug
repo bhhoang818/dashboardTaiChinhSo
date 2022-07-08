@@ -1,5 +1,5 @@
 header 
-	.top-bar.d-flex.align-items-center.justify-content-between
+	nav.top-bar.d-flex.align-items-center.justify-content-between
 		.top-bar-left.d-flex.align-items-center
 			a.top-bar-left__menu(href="") 
 				img(src="./images/icons/menu.svg", alt="")
@@ -10,8 +10,8 @@ header
 					select.form-control.m-0(name='name' placeholder='Tất cả khu vực')
 						option(value="") Tất cả khu vực
 						option(value="") Tất cả khu vực
-				.form-group
-					select.form-control.m-0.ms-3(name='name' placeholder='Tất cả khu vực')
+				.form-group.ms-3
+					select.form-control.m-0(name='name' placeholder='Tất cả khu vực')
 						option(value="") Tất cả Tỉnh/TP
 						option(value="") Tất cả Tỉnh/TP
 		.top-bar-right
@@ -24,6 +24,7 @@ header
 				li
 					a.bell_ring(href="") 
 						img(src="./images/icons/bell.svg", alt="")
+						span.important 90
 				li 
 					a.log_out(href="") 
 						img(src="./images/icons/logout.svg", alt="")

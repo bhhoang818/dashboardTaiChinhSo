@@ -100,7 +100,9 @@
         if (typeof options.template !== 'string' && !(options.template instanceof $))
             options.template =
             '<div class="daterangepicker">' +
+            // '<span class="drp-selected"></span>' +
             '<div class="ranges"></div>' +
+            '<div id="drp-calendar">' +
             '<div class="drp-calendar left">' +
             '<div class="calendar-table"></div>' +
             '<div class="calendar-time"></div>' +
@@ -109,10 +111,12 @@
             '<div class="calendar-table"></div>' +
             '<div class="calendar-time"></div>' +
             '</div>' +
+            '</div>' +
+            '<div id="drp-buttons">' +
             '<div class="drp-buttons">' +
-            '<span class="drp-selected"></span>' +
             '<button class="cancelBtn" type="button"></button>' +
             '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
+            '</div>' +
             '</div>' +
             '</div>';
 

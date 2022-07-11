@@ -127,3 +127,56 @@
                             font-weight: 500
                             span
                                 color: #464646
+    @media screen and ( max-width: 1366.98px )
+        .wrap-container
+            .wrap-left
+                .wrap-top
+                    .panel
+                        &-body
+                            .wrap-list
+                                li
+                                    .item-left
+                                        p
+                                            font-size: 18px
+                                    .item-right
+                                        .big-txt
+                                            p
+                                                font-size: 20px
+                                                line-height: normal
+    @media screen and ( max-width: 1199.98px )
+        .wrap-container
+            .wrap-left
+                flex: 0 0 100%
+                width: 100%
+            .wrap-right
+                flex: 0 0 100%
+                width: 100%
+                margin-left: 0
+    @media screen and ( max-width: 575.98px )
+        .wrap-container
+            .wrap-left
+                .wrap-top
+                    padding: 16px
+                    .panel
+                        &-body
+                            .wrap-list
+                                li
+                                    flex-direction: column
+                                    .item-left
+                                        clip-path: unset
+                                        margin-right: 0
+                                        margin-bottom: 8px
+                                        padding: 16px
+                                        justify-content: center
+                                        border: 0
+                                        p
+                                            text-align: center
+                                    .item-right
+                                        max-width: unset
+                                    &:nth-child(1),
+                                    &:nth-child(2),
+                                    &:nth-child(3),
+                                    &:nth-child(4),
+                                    &:nth-child(5)
+                                        .item-left
+                                            max-width: unset

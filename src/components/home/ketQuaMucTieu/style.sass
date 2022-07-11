@@ -5,6 +5,15 @@
     .wrap-title
         #reportrange
             margin-top: -40px
+            display: flex
+            align-items: center
+            gap: 16px
+            span
+                font-weight: 400
+                font-size: 18px
+                line-height: 24px
+                color: #454F5B
+
     .grid-container
         flex-wrap: wrap
         margin-left: -8px
@@ -18,6 +27,12 @@
                 flex: 0 0 (100% / 3)
                 width: (100% / 3)
                 margin-bottom: 16px
+            @media screen and ( max-width: 1199.98px )
+                flex: 0 0 (100%/2)
+                width: (100%/2)
+            @media screen and ( max-width: 575.98px )
+                flex: 0 0 100%
+                width: 100%
             .panel
                 width: 100%
                 height: 100%
@@ -109,3 +124,22 @@
                 .panel
                     background-image: url(../images/mask-5.jpg)
                     background-color: linear-gradient(109.08deg, #FFC9B4 0%, rgba(255, 229, 245, 0) 98.01%)
+    @media screen and ( max-width: 1280.98px )
+        .grid-container
+            .cell
+                .panel
+                    &-heading
+                        ul
+                            li
+                                .heading
+                                    font-size: 20px
+                                    line-height: normal
+    @media screen and ( max-width: 575.98px )
+        padding-top: 80px
+        .wrap-title
+            flex-direction: column
+            margin-bottom: 24px
+            .hero-title
+                padding-bottom: 0
+            #reportrange
+                margin-top: 0

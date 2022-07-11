@@ -21,7 +21,7 @@
                                         color: #464646
                                         transition: all .3s
                                         @media screen and ( max-width: 1366.98px )
-                                            font-size: 16px
+                                            font-size: 18px
                                     &::after
                                         position: absolute
                                         bottom: -9px
@@ -52,6 +52,7 @@
                                                     line-height: 24px
                                                     text-align: right
                                                     color: #000000
+                                                    white-space: nowrap
                                                 p
                                                     font-weight: 500
                                                     font-size: 18px
@@ -74,6 +75,7 @@
                                                         line-height: 24px
                                                         text-align: right
                                                         color: #464646
+                                                        white-space: nowrap
                                                     &:nth-child(1)
                                                         p
                                                             text-align: left
@@ -88,3 +90,45 @@
                                                     border-bottom: 1px solid #D3D8DE
                                     &.active
                                         display: block
+    @media screen and ( max-width: 1366.98px )
+        .wrap-container
+            .wrap-left
+                .wrap-bottom
+                    .panel
+                        &-body
+                            .container--tabs
+                                .tab-content
+                                    .tab-panel
+                                        table
+                                            tr
+                                                td
+                                                    h3,
+                                                    p
+                                                        font-size: 16px
+    @media screen and ( max-width: 575.98px )
+        .wrap-container
+            .wrap-left
+                .wrap-bottom
+                    .panel
+                        &-body
+                            .container--tabs
+                                .nav-tabs
+                                    width: 100%
+                                    overflow-x: auto
+                                    padding-bottom: 20px
+                                    li
+                                        a
+                                            white-space: nowrap
+                                .tab-content
+                                    .tab-panel
+                                        overflow-x: auto
+                                        padding-bottom: 30px
+                                        table
+                                            tr
+                                                td
+                                                    padding: 16px 30px
+                                                    &:nth-child(1)
+                                                        position: -webkit-sticky
+                                                        position: sticky
+                                                        z-index: 2
+                                                        box-shadow: 0px 2px 16px rgba(33, 43, 54, 0.05)

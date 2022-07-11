@@ -86,7 +86,9 @@
     &::before,
     &::after
         display: none !important
-
+    @media screen and ( max-width: 575.98px )
+        width: auto !important
+        max-width: unset !important
     .ranges
         margin-top: 0 !important
         padding: 16px 17px !important
@@ -147,6 +149,11 @@
                         tr
                             th.month
                                 text-align: right
+    #drp-buttons
+        .drp-buttons
+            display: flex
+            justify-content: flex-end
+
 .daterangepicker td.active,
 .daterangepicker td.active.start-date,
 .daterangepicker td.active.end-date,

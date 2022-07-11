@@ -3,7 +3,6 @@ $(document).ready(function () {
     chartJs();
     progressBar();
     tabsPanel();
-    mappingListener();
 })
 const pickerDate = () => {
     var start = moment().subtract(29, 'days');
@@ -114,11 +113,4 @@ const tabsPanel = () => {
     for (i = 0; i < theTabs.length; i++) {
         theTabs[i].addEventListener("click", theTabClicks)
     }
-}
-const mappingListener = () => {
-    $(".daterangepicker").append("<div id='drp-calendar'></div>");
-    $(".daterangepicker").append("<div id='drp-buttons'></div>");
-    $(".daterangepicker .drp-calendar.left").appendTo('.daterangepicker #drp-calendar');
-    $(".daterangepicker .drp-calendar.right").appendTo('.daterangepicker #drp-calendar');
-    $(".daterangepicker .drp-buttons").appendTo('.daterangepicker #drp-buttons');
 }
